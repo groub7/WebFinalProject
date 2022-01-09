@@ -1,10 +1,10 @@
 <?php require_once("../../resources/config.php")?>
 <?php include(TEMPLATE_BACK . "/header.php") ?>
 <?php
-if(!isset($_SESSION['username'])){
+if(!isset($_SESSION['f_name'])){
     redirect("../../public");
 }
-if(!isset($_SESSION['employee'])){
+if(!isset($_SESSION['admin_status'])){
     redirect("../../public");
 }
 ?>
@@ -33,6 +33,12 @@ if(!isset($_SESSION['employee'])){
                 }
                 if(isset($_GET['current_orders'])){
                     include(TEMPLATE_BACK . "/current_orders.php");
+                }
+                if(isset($_GET['instructors'])){
+                    include(TEMPLATE_BACK . "/instructors.php");
+                }
+                if(isset($_GET['students'])){
+                    include(TEMPLATE_BACK . "/students.php");
                 }
                 if(isset($_GET['users'])){
                     include(TEMPLATE_BACK . "/users.php");

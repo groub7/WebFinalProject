@@ -14,19 +14,17 @@
                           <p class="bg-success">
                         </p>
 
-                        <a href="add_user.php" class="btn btn-primary">Add User</a>
-
-
                         <div class="col-md-12">
 
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Username</th>
                                         <th>First Name</th>
                                         <th>Last Name </th>
-                                        <th>Post Code</th>
+                                        <th>Email</th>
+                                        <th>Password</th>
+                                        <th>Pending</th>
                                     </tr>
                                 </thead>
                                 <tbody>

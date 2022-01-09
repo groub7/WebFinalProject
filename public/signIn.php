@@ -1,13 +1,26 @@
 <?php require_once("../resources/config.php"); ?>
-<?php include(TEMPLATE_FRONT . DS . "header.php") ?>
+<?php include(TEMPLATE_FRONT . DS . "indexHeader.php") ?>
     <!-- Page Content -->
     <div class="container">
 
         <header>
-            <h1 class="text-center">Sign In</h1>
+            <h1 class="text-center">Sign Up</h1>
             <div class="col-sm-4 col-sm-offset-5">
                 <form class="" action="" method="post" enctype="multipart/form-data">
                     <?php submit_user(); ?>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="instructor" onclick="location.href='signup.php'">
+                        <label class="form-check-label" for="instructor">
+                            Instructor
+                        </label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="student" checked>
+                            <label class="form-check-label" for="student">
+                                Student
+                            </label>
+                        </div>
+                    </div>
+
                     <div class="form-group"><label for="firstname">
                             First Name<input type="text" name="firstname" class="form-control"></label>
                     </div>
@@ -16,32 +29,20 @@
                             Last Name<input type="text" name="lastname" class="form-control"></label>
                     </div>
 
-                    <div class="form-group"><label for="">
-                            Username<input type="text" name="username" class="form-control"></label>
+                    <div class="form-group"><label for="email">
+                            E Mail<input type="email" name="email" class="form-control"></label>
                     </div>
 
                     <div class="form-group"><label for="password">
                             Password<input type="password" name="password" class="form-control"></label>
                     </div>
 
-                    <div class="form-group"><label for="address">
-                            Address<input type="text" name="address" class="form-control"></label>
-                    </div>
-
-                    <div class="form-group"><label for="town">
-                            Town<input type="text" name="town" class="form-control"></label>
-                    </div>
-
-                    <div class="form-group"><label for="postcode">
-                            Post Code<input type="text" name="postcode" class="form-control"></label>
-                    </div>
-
-                    <div class="form-group"><label for="email">
-                            E Mail<input type="email" name="email" class="form-control"></label>
+                    <div class="form-group"><label for="university">
+                            University<input type="text" name="university" class="form-control"></label>
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" name="submit" class="btn btn-primary" >
+                        <input type="submit" name="submit" class="btn btn-primary" value="Sign Up">
                     </div>
                 </form>
             </div>
@@ -49,8 +50,6 @@
 
         </header>
 
-
-    </div>
 
     </div>
     <!-- /.container -->
