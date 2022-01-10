@@ -36,6 +36,8 @@
     <link rel="stylesheet" type="text/css" href="styletwo.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/custom_2.css">
 
     <!-- Optional theme -->
     <script src="css/bootstrap-theme.min.css"></script>
@@ -43,6 +45,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script src="js/jquery.calendario.js"></script>
+    <script src="js/modernizr.custom.63321.js"></script>
 </head>
 
 <body>
