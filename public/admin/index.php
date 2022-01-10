@@ -11,9 +11,6 @@ if(!isset($_SESSION['admin_status'])){
         <div id="page-wrapper">
 
             <div class="container-fluid">
-
-
-
                 <?php
                 if($_SERVER['REQUEST_URI'] == "/WebMidterm/public/admin/" || $_SERVER['REQUEST_URI'] == "/WebMidterm/public/admin/index.php"){
                     include(TEMPLATE_BACK . "/admin_content.php");
@@ -27,6 +24,9 @@ if(!isset($_SESSION['admin_status'])){
                 }
                 if(isset($_GET['edit_coffee'])){
                     include(TEMPLATE_BACK . "/edit_coffee.php");
+                }
+                if(isset($_GET['admin'])){
+                    include(TEMPLATE_BACK . "/admin.php");
                 }
                 if(isset($_GET['orders'])){
                     include(TEMPLATE_BACK . "/orders.php");

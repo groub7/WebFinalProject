@@ -221,7 +221,7 @@ function submit_user(){
         $mail->setFrom('mydemyeducation@gmail.com');
         $mail->addAddress($email);
         $mail->Subject = 'Hello from Mydemy™!';
-        $mail->Body = 'Please contact to our administrator to activate your account.';
+        $mail->Body = "Hello '$firstname' Please contact to our administrator to activate your account.";
 //send the message, check for errors
         if (!$mail->send()) {
             echo "ERROR: " . $mail->ErrorInfo;
@@ -352,50 +352,26 @@ function get_coffees_in_admin(){
 }
 
 
-function add_coffee(){
-//    if(isset($_POST['publish'])){
-//        $coffee_name = escape_string($_POST['coffee_name']);
-//        $coffee_description = escape_string($_POST['coffee_description']);
-//        $coffee_price = escape_string($_POST['coffee_price']);
-//        $coffee_size = escape_string($_POST['coffee_size']);
-//        $coffee_image = escape_string($_FILES['file']['name']);
-//        $image_temp_location = escape_string($_FILES['file']['tmp_name']);
-//        $coffee_image = "localhost/WebMidterm/resources/images/" . $coffee_image;
-//
-//        move_uploaded_file($image_temp_location, UPLOAD_DIRECTORY . DS . $coffee_image);
-//
-//        $query2 = query("SELECT * FROM coffee WHERE coffee_name = '$coffee_name' ORDER BY coffee_id DESC");
-//        confirm($query2);
-//        if(mysqli_num_rows($query2) == 0){
-//            $query = query("INSERT INTO coffee (coffee_name, coffee_description, coffee_image) VALUES ('$coffee_name', '$coffee_description', '$coffee_image')");
-//            confirm($query);
-//        }
-//
-//        $query2 = query("SELECT * FROM coffee WHERE coffee_name = '$coffee_name' ORDER BY coffee_id DESC");
-//        confirm($query2);
-//
-//        while($row = fetch_array($query2)){
-//            $type_ref = 2;
-//            if(strcasecmp($coffee_size, "tall") == 0){
-//                $type_ref = 1;
-//            }
-//            elseif(strcasecmp($coffee_size, "venti") == 0){
-//                $type_ref = 3;
-//            }
-//            $coffee_id = $row['coffee_id'];
-//            $query = query("INSERT INTO size (coffee_id, cost, type, type_ref) VALUES ('$coffee_id', '$coffee_price', '$coffee_size', '$type_ref')");
-//            confirm($query);
-//
-//        }
-//
-//            echo "<script>
-//                alert('Coffee Added Successfully');
-//                window.location.href='index.php?coffees';
-//                </script>";
-//
-//
-//
-//    }
+function add_admin(){
+    if(isset($_POST['publish'])){
+        $first_name = escape_string($_POST['first_name']);
+        $last_name = escape_string($_POST['last_name']);
+        $email = escape_string($_POST['email']);
+        $password = escape_string($_POST['password']);
+
+        $query2 = query("SELECT * FROM user WHERE email = '$email' and password = '$password'");
+        confirm($query2);
+        if(mysqli_num_rows($query2) == 0){
+            $query = query("INSERT INTO user (first_name, last_name, admin_status, email, password, is_approved) VALUES ('$first_name', '$last_name', 1, '$email', '$password', 1)");
+            confirm($query);
+        }
+
+            echo "<script>
+                alert('Admin Added Successfully');
+                window.location.href='index.php?users';
+                </script>";
+
+    }
 }
 
 function edit_coffee(){
@@ -480,7 +456,7 @@ echo $user;
 }
 
 function admin_instructors(){
-    $user_query = query("SELECT * FROM user INNER JOIN instructor WHERE instructor_id = user_id AND is_approved = 1");
+    $user_query = query("SELECT * FROM user INNER JOIN instructor WHERE instructor_id = user_id");
     confirm($user_query);
 
     while($row = fetch_array($user_query)){
@@ -512,7 +488,7 @@ DELIMITER;
 }
 
 function admin_students(){
-    $user_query = query("SELECT * FROM user INNER JOIN student WHERE student_id = user_id AND is_approved = 1");
+    $user_query = query("SELECT * FROM user INNER JOIN student WHERE student_id = user_id");
     confirm($user_query);
 
     while($row = fetch_array($user_query)){

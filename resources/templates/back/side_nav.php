@@ -10,6 +10,11 @@
         <li>
             <a href="index.php?add_coffee"><i class="fa fa-fw fa-table"></i> Add Course</a>
         </li>
+
+        <li>
+            <a href="index.php?admin"><i class="fa fa-fw fa-wrench"></i>Add Admin</a>
+        </li>
+
         <li>
             <a href="index.php?orders"><i class="fa fa-fw fa-desktop"></i> Sections</a>
         </li>
