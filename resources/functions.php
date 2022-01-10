@@ -66,12 +66,14 @@ function login_user(){
                     $_SESSION['admin_status'] = $row['admin_status'];
                     redirect("admin/index.php");
                 }
-                if(mysqli_num_rows($query2) != 0){
-                    $_SESSION['is_instructor'] = 1;
-                    redirect("loginIndex.php");
-                }
-                else {
-                    redirect("studentIndex.php");
+                else{
+                    if(mysqli_num_rows($query2) != 0){
+                        $_SESSION['is_instructor'] = 1;
+                        redirect("loginIndex.php");
+                    }
+                    else {
+                        redirect("studentIndex.php");
+                    }
                 }
             }
         }
@@ -80,17 +82,18 @@ function login_user(){
 
 function validate_password($password){
     // Validate password strength
-//    $uppercase = preg_match('@[A-Z]@', $password);
-//    $lowercase = preg_match('@[a-z]@', $password);
-//    $number    = preg_match('@[0-9]@', $password);
-//    $specialChars = preg_match('@[^\w]@', $password);
-//
-//    if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+    $uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $number    = preg_match('@[0-9]@', $password);
+    $specialChars = preg_match('@[^\w]@', $password);
+
+    if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
 //        return 0;
-//    }
-//    else{
-//        return 1;
-//    }
+        return 1;
+    }
+    else{
+        return 1;
+    }
 }
 
 function submit_user(){
