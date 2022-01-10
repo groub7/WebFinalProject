@@ -13,8 +13,6 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li><a href="addsubject.php"><span class="glyphicon glyphicon-plus-sign"></span> Subjects</a></li>
-            <li><a href="addcourse.php"><span class="glyphicon glyphicon-plus-sign"></span> Course</a></li>
             <li><a href="addtime.php"><span class="glyphicon glyphicon-time"></span> Time</a></li>
 
             <li class="dropdown -align-right">

@@ -13,9 +13,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="loginIndex.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li><a href="addsubject.php"><span class="glyphicon glyphicon-plus-sign"></span> Sections</a></li>
-            <li><a href="addfaculty.php"><span class="glyphicon glyphicon-plus-sign"></span> Faculty</a></li>
-            <li><a href="addcourse.php"><span class="glyphicon glyphicon-plus-sign"></span> Course</a></li>
+            <li><a href="studentIndex.php"><span class="glyphicon glyphicon-plus-sign"></span> Sections</a></li>
+            <li><a href="studentIndex.php"><span class="glyphicon glyphicon-plus-sign"></span> Courses</a></li>
             <li><a href="addroom.php"><span class="glyphicon glyphicon-asterisk"></span> Room</a></li>
             <li><a href="addtime.php"><span class="glyphicon glyphicon-time"></span> Time</a></li>
             <li><a href="list.php"><span class="glyphicon glyphicon-list"></span> List</a></li>
@@ -25,7 +24,7 @@
                 <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo isset($_SESSION['f_name']) ? $_SESSION['f_name'] : ""?> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <?php if( isset($_SESSION['f_name']) && !empty($_SESSION['f_name'])){?>
-                    <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                        <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                     <?php }else{ ?>
                         <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                         <li><a href="signIn.php"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
@@ -37,4 +36,4 @@
         </ul>
     </div>
 </div>
-    <!-- /.navbar-collapse -->
+<!-- /.navbar-collapse -->
