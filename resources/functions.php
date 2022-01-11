@@ -381,7 +381,7 @@ DELIMITER;
 }
 
 function instructor_sections(){
-    $user_query = query("SELECT * FROM user");
+    $user_query = query("SELECT * FROM user WHERE user_id = ");
     confirm($user_query);
 
     while($row = fetch_array($user_query)){
