@@ -14,13 +14,6 @@
         <ul class="nav navbar-nav">
             <li><a href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
             <li><a href="admin/index.php"><span class="glyphicon glyphicon-calendar"></span> Admin</a></li>
-            <li><a href="addsubject.php"><span class="glyphicon glyphicon-plus-sign"></span> Sections</a></li>
-            <li><a href="addfaculty.php"><span class="glyphicon glyphicon-plus-sign"></span> Faculty</a></li>
-            <li><a href="addcourse.php"><span class="glyphicon glyphicon-plus-sign"></span> Course</a></li>
-            <li><a href="addroom.php"><span class="glyphicon glyphicon-asterisk"></span> Room</a></li>
-            <li><a href="addtime.php"><span class="glyphicon glyphicon-time"></span> Time</a></li>
-            <li><a href="list.php"><span class="glyphicon glyphicon-list"></span> List</a></li>
-            <li><a href="tablelist.php"><span class="glyphicon glyphicon-calendar"></span> Schedule</a></li>
 
             <li class="dropdown -align-right">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo isset($_SESSION['f_name']) ? $_SESSION['f_name'] : ""?> <b class="caret"></b></a>

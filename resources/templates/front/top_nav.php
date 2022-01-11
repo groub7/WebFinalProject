@@ -13,8 +13,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="loginIndex.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li><a href="addsubject.php"><span class="glyphicon glyphicon-plus-sign"></span> Sections</a></li>
-            <li><a href="addfaculty.php"><span class="glyphicon glyphicon-plus-sign"></span> Faculty</a></li>
+            <li><a href="addsubject.php"><span class="glyphicon glyphicon-plus-sign"></span> Add Section</a></li>
+            <li><a href="cancelInstructorSection.php"><span class="glyphicon glyphicon-plus-sign"></span> Cancel Section</a></li>
             <li><a href="addcourse.php"><span class="glyphicon glyphicon-plus-sign"></span> Course</a></li>
             <li><a href="addroom.php"><span class="glyphicon glyphicon-asterisk"></span> Room</a></li>
             <li><a href="addtime.php"><span class="glyphicon glyphicon-time"></span> Time</a></li>

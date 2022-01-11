@@ -1,7 +1,7 @@
 <div class="col-md-12">
 <div class="row">
 <h1 class="page-header">
-   All Orders
+   All Sections
 
 </h1>
 </div>
@@ -11,17 +11,17 @@
     <thead>
 
       <tr>
-           <th>Customer ID</th>
-           <th>Name</th>
-           <th>Quantity</th>
-           <th>Size</th>
-           <th>Order ID</th>
-           <th>Order Date</th>
-           <th>Status</th>
+           <th>Student Name</th>
+           <th>Instructor Name</th>
+           <th>Section Name</th>
+           <th>Start Time</th>
+           <th>End Time</th>
+           <th>Date</th>
+           <th>Available</th>
       </tr>
     </thead>
     <tbody>
-        <?php display_orders(); ?>
+        <?php display_sections(); ?>
     </tbody>
 </table>
 </div>

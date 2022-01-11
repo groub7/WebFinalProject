@@ -7,14 +7,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="loginIndex.php">Mydemy ™</a>
+        <a class="navbar-brand" href="studentIndex.php">Mydemy ™</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="loginIndex.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li><a href="studentIndex.php"><span class="glyphicon glyphicon-plus-sign"></span> Sections</a></li>
+            <li><a href="studentIndex.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
             <li><a href="studentIndex.php"><span class="glyphicon glyphicon-plus-sign"></span> Courses</a></li>
+            <li><a href="cancelEnroll.php"><span class="glyphicon glyphicon-plus-sign"></span> Enrollment</a></li>
             <li><a href="addroom.php"><span class="glyphicon glyphicon-asterisk"></span> Room</a></li>
             <li><a href="addtime.php"><span class="glyphicon glyphicon-time"></span> Time</a></li>
             <li><a href="list.php"><span class="glyphicon glyphicon-list"></span> List</a></li>

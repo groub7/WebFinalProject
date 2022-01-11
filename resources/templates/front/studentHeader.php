@@ -53,5 +53,5 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <?php include(TEMPLATE_FRONT . DS . "top_nav.php") ?>
+    <?php include(TEMPLATE_FRONT . DS . "student_top_nav.php") ?>
 </nav>

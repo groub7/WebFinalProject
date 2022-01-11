@@ -215,7 +215,40 @@ function submit_section(){
     }
 }
 
-function display_orders(){
+function display_sections(){
+    $query = query("SELECT * FROM sections 
+    INNER JOIN enrolls e on sections.section_id = e.section_id
+    INNER JOIN instructor i on sections.instructor_id = i.instructor_id
+    INNER JOIN student s on e.student_id = s.student_id
+    INNER JOIN user u on i.instructor_id = u.user_id
+    WHERE is_avaliable = 1 ORDER BY date DESC");
+    confirm($query);
+    while($row = fetch_array($query)){
+        $section_id = $row['section_id'];
+        $student_id = $row['student_id'];
+        $instructor_name = $row['first_name'];
+        $section_name = $row['section_name'];
+        $start_time = $row['start_time'];
+        $end_time = $row['end_time'];
+        $date = $row['date'];
+        $query2 = query("SELECT * FROM user WHERE user_id = '$student_id'");
+        confirm($query2);
+        while($row = fetch_array($query2)){
+            $student_name = $row['first_name'];
+        }
+
+        $user = <<<DELIMITER
+<tr>
+<td>{$student_name}</td>
+<td>{$instructor_name}</td>
+<td>{$section_name}</td>
+<td>{$start_time}</td>
+<td>{$end_time}</td>
+<td>{$date}</td>
+<td>Available</td>
+DELIMITER;
+        echo $user;
+    }
 }
 
 function display_current_orders(){
@@ -317,6 +350,38 @@ DELIMITER;
 
 function admin_students(){
     $user_query = query("SELECT * FROM user INNER JOIN student WHERE student_id = user_id");
+    confirm($user_query);
+
+    while($row = fetch_array($user_query)){
+        $user_id = $row['user_id'];
+        $first_name = $row['first_name'];
+        $last_name = $row['last_name'];
+        $email = $row['email'];
+        $pending = $row['is_approved'];
+        $password = $row['password'];
+        if($pending == 1){
+            $status = "Active";
+        }
+        else{
+            $status = "Inactive";
+        }
+        $user = <<<DELIMITER
+<tr>
+<td>{$user_id}</td>
+<td>{$first_name}</td>
+<td>{$last_name}</td>
+<td>{$email}</td>
+<td>{$password}</td>
+<td>{$status}</td>
+<td><a class="btn btn-danger" href="inactive_status.php?id={$user_id}"><span class="glyphicon glyphicon-remove"></span></a></td>
+<td><a class="btn btn-success" href="status.php?id={$user_id}"><span class="glyphicon glyphicon-ok"></span></a></td>
+DELIMITER;
+        echo $user;
+    }
+}
+
+function instructor_sections(){
+    $user_query = query("SELECT * FROM user");
     confirm($user_query);
 
     while($row = fetch_array($user_query)){
