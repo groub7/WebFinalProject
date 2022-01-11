@@ -251,10 +251,22 @@ DELIMITER;
     }
 }
 
-function display_current_orders(){
-}
-
-function get_coffees_in_admin(){
+function display_course(){
+    $query = query("SELECT * FROM course");
+    confirm($query);
+    while($row = fetch_array($query)){
+        $course_name = $row['name'];
+        $course_subject = $row['subject'];
+        $course_code = $row['course_code'];
+        $user = <<<DELIMITER
+<tr>
+<td>{$course_name}</td>
+<td>{$course_subject}</td>
+<td>{$course_code}</td>
+</tr>
+DELIMITER;
+        echo $user;
+    }
 }
 
 

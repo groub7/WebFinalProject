@@ -7,9 +7,6 @@
         <li>
             <a href="index.php?coffees"><i class="fa fa-fw fa-bar-chart-o"></i> View Courses</a>
         </li>
-        <li>
-            <a href="index.php?add_coffee"><i class="fa fa-fw fa-table"></i> Add Course</a>
-        </li>
 
         <li>
             <a href="index.php?admin"><i class="fa fa-fw fa-wrench"></i>Add Admin</a>
