@@ -31,7 +31,8 @@ if((int)$_SESSION['status'] != 1){
                     <tr>
                         <th>Section Name</th>
                         <th>Student First Name</th>
-                        <th>Student Last Name </th>
+                        <th>Student Last Name</th>
+                        <th>Email</th>
                         <th>Start Time</th>
                         <th>End Time</th>
                         <th>Date</th>
@@ -39,7 +40,7 @@ if((int)$_SESSION['status'] != 1){
                     </thead>
                     <tbody>
 
-                    <?php admin_users(); ?>
+                    <?php instructor_sections(); ?>
 
                     </tbody>
                 </table> <!--End of Table-->
@@ -47,3 +48,5 @@ if((int)$_SESSION['status'] != 1){
 
             </div>
         </div>
+    <!-- /.container -->
+<?php include(TEMPLATE_FRONT . DS . "footer.php") ?>

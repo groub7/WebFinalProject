@@ -210,7 +210,7 @@ function submit_section(){
 
         echo "<script>
                 alert('Section added successfully');
-                window.location.href='addsection.php';
+                window.location.href='addsubject.php';
                 </script>";
     }
 }
@@ -381,32 +381,33 @@ DELIMITER;
 }
 
 function instructor_sections(){
-    $user_query = query("SELECT * FROM user WHERE user_id = ");
-    confirm($user_query);
+    $user_id = $_SESSION['user_id'];
+    $sections = query("SELECT * FROM sections
+    INNER JOIN enrolls ON sections.section_id = enrolls.section_id
+    INNER JOIN student s on enrolls.student_id = s.student_id
+    INNER JOIN user u on s.student_id = u.user_id
+    WHERE instructor_id = '$user_id';");
+    confirm($sections);
 
-    while($row = fetch_array($user_query)){
-        $user_id = $row['user_id'];
+    while($row = fetch_array($sections)){
+        $section_id = $row['section_id'];
+        $section_name = $row['section_name'];
         $first_name = $row['first_name'];
         $last_name = $row['last_name'];
+        $start_time = $row['start_time'];
+        $end_time = $row['end_time'];
         $email = $row['email'];
-        $pending = $row['is_approved'];
-        $password = $row['password'];
-        if($pending == 1){
-            $status = "Active";
-        }
-        else{
-            $status = "Inactive";
-        }
+        $date = $row['date'];
         $user = <<<DELIMITER
 <tr>
-<td>{$user_id}</td>
+<td>{$section_name}</td>
 <td>{$first_name}</td>
 <td>{$last_name}</td>
 <td>{$email}</td>
-<td>{$password}</td>
-<td>{$status}</td>
-<td><a class="btn btn-danger" href="inactive_status.php?id={$user_id}"><span class="glyphicon glyphicon-remove"></span></a></td>
-<td><a class="btn btn-success" href="status.php?id={$user_id}"><span class="glyphicon glyphicon-ok"></span></a></td>
+<td>{$start_time}</td>
+<td>{$end_time}</td>
+<td>{$date}</td>
+<td><a class="btn btn-danger" href="../resources/cancelCourse.php?id={$section_id}"><span class="glyphicon glyphicon-remove"></span></a></td>
 DELIMITER;
         echo $user;
     }
