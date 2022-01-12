@@ -49,5 +49,5 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <?php include("index_top_nav.php") ?>
-</nav>
+<?php include(TEMPLATE_FRONT . DS . "index_top_nav.php") ?>
+    </nav>
