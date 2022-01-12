@@ -12,7 +12,7 @@
         </div>
 
         <div class="col-md-6">
-            <img class="img-fluid d-none d-md-block" src="img/teacher.jpg" alt="">
+            <img class="img-fluid d-none d-md-block" src="public/img/teacher.jpg" alt="">
         </div>
     </div>
 </div>
@@ -25,7 +25,7 @@
         <!-- <a href="#cards"><img class="center mb-5" src="arrow.png" alt="" style="width: 200px;"></a> -->
         <a href="#cards"><div class="containers center">
                 <div class="image">
-                    <img src="img/arrow.png" class="img" style="width: 200px;" alt="">
+                    <img src="public/img/arrow.png" class="img" style="width: 200px;" alt="">
                 </div>
             </div>
         </a>
@@ -38,7 +38,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100" style="box-shadow: 15px 15px rgba(16, 0, 43, 0.6);">
-                <img src="img/leo.jpg" class="card-img-top" alt="...">
+                <img src="public/img/leo.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">Leonardo DiCaprio</h5>
                     <p class="card-text text-center">MEF University <br> <br> ENG202 - B2 Level </p>
@@ -48,7 +48,7 @@
         </div>
         <div class="col">
             <div class="card h-100" style="box-shadow: 15px 15px rgba(16, 0, 43, 0.6);">
-                <img src="img/24.png" class="card-img-top" alt="...">
+                <img src="public/img/24.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">Sultan Nezihe TURHAN</h5>
                     <p class="card-text text-center">Galatasaray University <br><br> ENG301 - C1 Level </p>
@@ -58,7 +58,7 @@
         </div>
         <div class="col">
             <div class="card h-100" style="box-shadow: 15px 15px rgba(16, 0, 43, 0.6);">
-                <img src="img/berkgokberk.jpg" class="card-img-top" alt="...">
+                <img src="public/img/berkgokberk.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">Berk GÖKBERK</h5>
                     <p class="card-text text-center">Boğaziçi University <br><br>ENG302 - C2 Level </p>
