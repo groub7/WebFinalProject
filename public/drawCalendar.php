@@ -26,7 +26,7 @@ for ($i = 0; $i < 6; $i++) {
 
         $result = mysqli_query($connection, "select c.course_code, s.date, s.start_time, 
         s.end_time from sections s inner join course c on s.course_id = c.course_id 
-        where day(s.date)=". $current_day ." and s.is_avaliable=1");
+        where day(s.date)=". $current_day ." and month(s.date)=1 and s.is_avaliable=1");
 
         while ($row = mysqli_fetch_assoc($result)) {
             $start_time = date_format(date_create($row['start_time']), 'H:i');
