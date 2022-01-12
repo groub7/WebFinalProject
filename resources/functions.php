@@ -69,7 +69,7 @@ function login_user(){
                 else{
                     if(mysqli_num_rows($query2) != 0){
                         $_SESSION['is_instructor'] = 1;
-                        redirect("loginIndex.php");
+                        redirect("instructorIndex.php");
                     }
                     else {
                         redirect("studentIndex.php");

@@ -1,5 +1,5 @@
 <?php require_once("../resources/config.php"); ?>
-<?php include(TEMPLATE_FRONT . DS . "newHeader.php") ?>
+<?php include(TEMPLATE_FRONT . DS . "instructorHeader.php") ?>
 
 
 <div class="container sa rounded mt-5 p-4" style="box-shadow: 15px 15px #10002B;">

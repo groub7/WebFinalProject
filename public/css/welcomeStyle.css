@@ -1,0 +1,93 @@
+body {
+  background-color: #72309e;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(254, 250, 224, 1);
+}
+.navbar {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.big {
+  font-size: 40px;
+  font-weight: 600;
+  text-shadow: 5px 5px #3f3f3f;
+}
+.sa {
+  background-color: rgba(3, 7, 30, 0.6);
+}
+.larger {
+  font-size: xx-large;
+}
+.nav-link {
+  color: black;
+}
+.cards {
+  color: black;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/* .learn {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(111, 40, 176, 1) 100%,
+    rgba(123, 44, 191, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.learn:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(111,40,176,1) 100%, rgba(123,44,191,1) 100%, rgba(0,212,255,1) 100%);
+} */
+.learn {
+    background: linear-gradient(270deg,  #bb6dff, #7b2cbf, #700cc6, #5e09a7, #4b0389,#5e09a7, #700cc6 );
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.containers {
+  width: 15%;
+  margin-top: 100px;
+  min-height: 10vh;
+}
+.image {
+  perspective: 3000px;
+  width: 10%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+.image img {
+  transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+  box-shadow: -80px 60px 15px 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+}
+.image:hover img {
+  transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+/* #a435f0 mydemy more renk */
