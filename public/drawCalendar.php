@@ -26,20 +26,22 @@ for ($i = 0; $i < 6; $i++) {
     for ($j = 0; $j < 7; $j++) {
         echo '<div class="calendar__day day">' . $current_day . ' ';
 
-        $result = mysqli_query($connection, "select c.course_code, s.date, s.start_time, 
+        if ($is_current_month) {
+            $result = mysqli_query($connection, "select c.course_code, s.date, s.start_time, 
         s.end_time, s.section_id from sections s inner join course c on s.course_id = c.course_id 
-        where day(s.date)=". $current_day ." and month(s.date)=1 and s.is_avaliable=1");
+        where day(s.date)=" . $current_day . " and month(s.date)=1 and s.is_avaliable=1");
 
-        while ($row = mysqli_fetch_assoc($result)) {
-            $start_time = date_format(date_create($row['start_time']), 'H:i');
-            $end_time = date_format(date_create($row['end_time']), 'H:i');
-            echo '<br><a href="sectionInfo.php?section_id='. $row['section_id'] .'" class="btn btn-sm btn-outline-light" style="margin: 2px; font-size: 1rem; background-color: #7b2cbf">'. $row['course_code'] .' '. $start_time .'-'. $end_time .'</a>';
+            while ($row = mysqli_fetch_assoc($result)) {
+                $start_time = date_format(date_create($row['start_time']), 'H:i');
+                $end_time = date_format(date_create($row['end_time']), 'H:i');
+                echo '<br><a href="sectionInfo.php?section_id=' . $row['section_id'] . '" class="btn btn-sm btn-outline-light" style="margin: 2px; font-size: 1rem; background-color: #7b2cbf">' . $row['course_code'] . ' ' . $start_time . '-' . $end_time . '</a>';
+            }
         }
-
         echo '</div>';
         $current_day++;
         if ($current_day > 31) {
             $current_day = 1;
+            $is_current_month = !$is_current_month;
         }
     }
     echo '</div>';
