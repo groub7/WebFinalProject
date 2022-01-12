@@ -1,5 +1,5 @@
 <?php require_once("../resources/config.php"); ?>
-<?php include(TEMPLATE_FRONT . DS . "studentHeader.php") ?>
+<?php include(TEMPLATE_FRONT . DS . "new_student_header.php") ?>
 <?php
 $connection = mysqli_connect("localhost", "root", "", "mydemy");
 
@@ -10,7 +10,7 @@ $result = mysqli_query($connection, "select day(date) from sections");
 $result = mysqli_query($connection, "select c.course_code, s.date, s.start_time, 
 s.end_time from sections s inner join course c on s.course_id = c.course_id");
 
-echo '<div class="calendar">';
+echo '<div class="calendar" style="background-color: black">';
 echo '<div class="calendar__header">
         <div>mon</div>
         <div>tue</div>
@@ -33,7 +33,7 @@ for ($i = 0; $i < 6; $i++) {
         while ($row = mysqli_fetch_assoc($result)) {
             $start_time = date_format(date_create($row['start_time']), 'H:i');
             $end_time = date_format(date_create($row['end_time']), 'H:i');
-            echo '<br><a href="sectionInfo.php?section_id='. $row['section_id'] .'" class="btn btn-sm btn-danger" style="margin: 2px; font-size: 1.1rem">'. $row['course_code'] .' '. $start_time .'-'. $end_time .'</a>';
+            echo '<br><a href="sectionInfo.php?section_id='. $row['section_id'] .'" class="btn btn-sm btn-danger" style="margin: 2px; font-size: 1rem">'. $row['course_code'] .' '. $start_time .'-'. $end_time .'</a>';
         }
 
         echo '</div>';

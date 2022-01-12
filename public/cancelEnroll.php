@@ -1,5 +1,5 @@
 <?php require_once("../resources/config.php"); ?>
-<?php include(TEMPLATE_FRONT . DS . "studentHeader.php") ?>
+<?php include(TEMPLATE_FRONT . DS . "new_student_header.php") ?>
 <?php
 if(!isset($_SESSION['f_name'])){
     redirect("../public/index.php");
@@ -16,7 +16,6 @@ if((int)$_SESSION['status'] != 1){
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">Status</th>
                 <th scope="col">Section Name</th>
                 <th scope="col">Start Time</th>
                 <th scope="col">End Time</th>
@@ -60,7 +59,6 @@ if((int)$_SESSION['status'] != 1){
 
                 echo '
               <tr>
-              <td>' . $status . '</td>
               <td>' . $sectionName . '</td>
               <td>' . $startTime . '</td>
               <td>' . $endTime . '</td>
@@ -83,5 +81,4 @@ if((int)$_SESSION['status'] != 1){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
-<?php include(TEMPLATE_FRONT . DS . "footer.php") ?>
-</html>
+<?php include(TEMPLATE_FRONT . DS . "new_footer.php") ?>

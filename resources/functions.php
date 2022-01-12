@@ -129,7 +129,7 @@ function submit_user(){
         $mail->Password = 'mydemy1234';
         $mail->setFrom('mydemyeducation@gmail.com');
         $mail->addAddress($email);
-        $mail->Subject = 'Hello from Mydemy™!';
+        $mail->Subject = 'Hello from Mydemy!';
         $mail->Body = "Hello '$firstname' Please contact to our administrator to activate your account.";
 //send the message, check for errors
         if (!$mail->send()) {

@@ -32,7 +32,7 @@ while($row = fetch_array($query)){
     $mail2->Password = 'mydemy1234';
     $mail2->setFrom('mydemyeducation@gmail.com');
     $mail2->addAddress($email);
-    $mail2->Subject = 'Section on Mydemy™ has been cancelled!';
+    $mail2->Subject = 'Section on Mydemy has been cancelled!';
     $mail2->Body = "Hello '$firstname' your section has been cancelled by our Student.";
 //send the message, check for errors
     if (!$mail2->send()) {

@@ -1,57 +1,56 @@
 <?php require_once("../resources/config.php"); ?>
-<?php include(TEMPLATE_FRONT . DS . "indexHeader.php") ?>
+<?php include(TEMPLATE_FRONT . DS . "newHeader.php") ?>
     <!-- Page Content -->
-    <div class="container">
+    <form class="" action="" method="post" enctype="multipart/form-data">
 
-        <header>
-            <h1 class="text-center">Sign Up</h1>
-            <div class="col-sm-4 col-sm-offset-5">
-                <form class="" action="" method="post" enctype="multipart/form-data">
-                    <?php submit_user(); ?>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="instructor" checked>
-                        <label class="form-check-label" for="instructor">
-                            Instructor
-                        </label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="student" onclick="location.href='signIn.php'">
-                            <label class="form-check-label" for="student">
-                                Student
-                            </label>
-                        </div>
-                    </div>
+        <div class="container justify-content-center p-4">
 
-
-                    <div class="form-group"><label for="firstname">
-                            First Name<input type="text" name="firstname" class="form-control"></label>
-                    </div>
-
-                    <div class="form-group"><label for="lastname">
-                            Last Name<input type="text" name="lastname" class="form-control"></label>
-                    </div>
-
-                    <div class="form-group"><label for="email">
-                            E Mail<input type="email" name="email" class="form-control"></label>
-                    </div>
-
-                    <div class="form-group"><label for="password">
-                            Password<input type="password" name="password" class="form-control"></label>
-                    </div>
-
-                    <div class="form-group"><label for="proficiency">
-                            Proficiency<input type="text" name="proficiency" class="form-control"></label>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="submit" name="submit" class="btn btn-primary" value="Sign Up">
-                    </div>
-                </form>
+            <div class="col-md-3 center">
+                <p class="text-center larger">R E G I S T E R</p>
             </div>
 
+            <hr>
 
-        </header>
+            <?php submit_user(); ?>
 
 
+
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <div class="form-group text-center"><label for="firstname">
+                            First Name<input type="text" name="firstname" class="form-control"></label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group text-center"><label for="lastname">
+                            Last Name<input type="text" name="lastname" class="form-control"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group text-center"><label for="email">
+                            E Mail<input type="email" name="email" class="form-control"></label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group text-center"><label for="password">
+                            Password<input type="password" name="password" class="form-control"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group text-center"><label for="proficiency">
+                    Proficiency<input type="text" name="proficiency" class="form-control"></label>
+            </div>
+
+            <div class="form-group text-center my-3">
+                <input type="submit" name="submit" class="btn btn-outline-light learn" value="Sign Up">
+            </div>
+        </div>
+    </form>
+
+    <div class="row mt-5">
+        <button type="button" class="btn text-light learn" onclick="location.href='signIn.php'">Are you a student?</button>
     </div>
     <!-- /.container -->
-<?php include(TEMPLATE_FRONT . DS . "footer.php") ?>
+<?php include(TEMPLATE_FRONT . DS . "new_footer.php") ?>

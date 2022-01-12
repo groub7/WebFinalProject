@@ -1,32 +1,40 @@
 <?php require_once("../resources/config.php"); ?>
-<?php include(TEMPLATE_FRONT . DS . "indexHeader.php") ?>
+<?php include(TEMPLATE_FRONT . DS . "newHeader.php") ?>
     <!-- Page Content -->
     <div class="container">
 
       <header>
-            <h1 class="text-center">Login</h1>
-          <h2><?php display_message(); ?></h2>
-        <div class="col-sm-4 col-sm-offset-5">         
             <form class="" action="" method="post" enctype="multipart/form-data">
-                <?php login_user(); ?>
-                <div class="form-group"><label for="">
-                    E-mail<input type="text" name="email" class="form-control"></label>
-                </div>
-                 <div class="form-group"><label for="password">
-                    Password<input type="password" name="password" class="form-control"></label>
+                <div class="container justify-content-center p-4">
+
+                    <div class="col-md-3 center" >
+                        <p class="text-center larger" >L O G I N</p>
+                    </div>
+                    <hr>
+                    <h2>
+                        <?php display_message(); ?>
+                    </h2>
+                    <div class="row">
+
+                        <?php login_user(); ?>
+
+                        <div class="form-group text-center mt-3"><label for="">
+                                E-mail<input size="30px" type="text" name="email" class="form-control loginInput"></label>
+                        </div>
+
+                        <div class="form-group text-center my-3"><label for="password">
+                                Password<input size="30px" type="password" name="password" class="form-control loginInput"></label>
+                        </div>
+
+                        <div class="form-group text-center ">
+                            <input type="submit" name="submit" class="btn btn-lg btn-outline-light col-2 learn" value="Login">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                  <input type="submit" name="submit" class="btn btn-primary" value="Login">
-                </div>
+
             </form>
         </div>  
 
-
-    </header>
-
-
-        </div>
-
     <!-- /.container -->
-<?php include(TEMPLATE_FRONT . DS . "footer.php") ?>
+<?php include(TEMPLATE_FRONT . DS . "new_footer.php") ?>
