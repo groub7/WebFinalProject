@@ -1,8 +1,6 @@
 <?php
 session_start();
-//$connection = mysqli_connect("localhost", "root", "", "mydemy");
-$connection = mysqli_connect("eu-cdbr-west-02.cleardb.net", "b3c2723fa090bf", "edb38139", "heroku_ffd5020397b6e96");
-
+$connection = mysqli_connect("localhost", "root", "", "mydemy");
 
 $user_id = $_SESSION['user_id'];
 $section_id = $_GET['section_id'];
