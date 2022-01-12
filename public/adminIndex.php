@@ -45,7 +45,7 @@ if(!isset($_SESSION['admin_status'])){
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100" style="box-shadow: 15px 15px rgba(16, 0, 43, 0.6);">
-                <img src="img/leo.jpg" class="card-img-top" alt="...">
+                <img src="img/29.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">Leonardo DiCaprio</h5>
                     <p class="card-text text-center">MEF University <br> <br> ENG202 - B2 Level </p>
@@ -65,7 +65,7 @@ if(!isset($_SESSION['admin_status'])){
         </div>
         <div class="col">
             <div class="card h-100" style="box-shadow: 15px 15px rgba(16, 0, 43, 0.6);">
-                <img src="img/berkgokberk.jpg" class="card-img-top" alt="...">
+                <img src="img/30.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">Berk GÖKBERK</h5>
                     <p class="card-text text-center">Boğaziçi University <br><br>ENG302 - C2 Level </p>
