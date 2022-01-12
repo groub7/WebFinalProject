@@ -1,5 +1,5 @@
 <?php require_once("../resources/config.php"); ?>
-<?php include(TEMPLATE_FRONT . DS . "header.php") ?>
+<?php include(TEMPLATE_FRONT . DS . "instructorHeader.php") ?>
 <?php
 if(!isset($_SESSION['f_name'])){
     redirect("../public/index.php");
@@ -8,7 +8,7 @@ if((int)$_SESSION['status'] != 1){
     redirect("../public/index.php");
 }
 ?>
-
+    <div class="container-fluid p-5" style="margin-top: 50px; background-color: rgb(182, 153, 204)">
 <div id="page-wrapper">
 
     <div class="container-fluid">
@@ -48,5 +48,5 @@ if((int)$_SESSION['status'] != 1){
 
             </div>
         </div>
+    </div>
     <!-- /.container -->
-<?php include(TEMPLATE_FRONT . DS . "footer.php") ?>
