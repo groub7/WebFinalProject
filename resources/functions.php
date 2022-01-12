@@ -199,7 +199,7 @@ function submit_section(){
         $date = escape_string($_POST['date']);
         $user_id = $_SESSION['user_id'];
 
-        $query = query("SELECT * FROM course WHERE course_code = '{$coursecode}'");
+        $query = query("SELECT * FROM course WHERE course_code = '{$coursecode}' LIMIT 1");
         confirm($query);
 
         while($row = fetch_array($query)){
@@ -290,10 +290,6 @@ function add_admin(){
                 </script>";
 
     }
-}
-
-function edit_coffee(){
-
 }
 
 function admin_users(){
