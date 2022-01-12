@@ -48,7 +48,7 @@
         </div>
         <div class="col">
             <div class="card h-100" style="box-shadow: 15px 15px rgba(16, 0, 43, 0.6);">
-                <img src="img/sultanhoca.jpg" class="card-img-top" alt="...">
+                <img src="img/24.png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">Sultan Nezihe TURHAN</h5>
                     <p class="card-text text-center">Galatasaray University <br><br> ENG301 - C1 Level </p>

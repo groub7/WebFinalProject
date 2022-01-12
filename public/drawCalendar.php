@@ -27,13 +27,13 @@ for ($i = 0; $i < 6; $i++) {
         echo '<div class="calendar__day day">' . $current_day . ' ';
 
         $result = mysqli_query($connection, "select c.course_code, s.date, s.start_time, 
-        s.end_time from sections s inner join course c on s.course_id = c.course_id 
+        s.end_time, s.section_id from sections s inner join course c on s.course_id = c.course_id 
         where day(s.date)=". $current_day ." and month(s.date)=1 and s.is_avaliable=1");
 
         while ($row = mysqli_fetch_assoc($result)) {
             $start_time = date_format(date_create($row['start_time']), 'H:i');
             $end_time = date_format(date_create($row['end_time']), 'H:i');
-            echo '<br><a class="btn btn-danger" style="margin: 2px; font-size: 1.1rem">'. $row['course_code'] .' '. $start_time .'-'. $end_time .'</a>';
+            echo '<br><a href="sectionInfo.php?section_id='. $row['section_id'] .'" class="btn btn-sm btn-danger" style="margin: 2px; font-size: 1.1rem">'. $row['course_code'] .' '. $start_time .'-'. $end_time .'</a>';
         }
 
         echo '</div>';

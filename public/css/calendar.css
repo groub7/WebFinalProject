@@ -154,24 +154,24 @@ sidebar {
 
 /* COSMETIC STYLING */
 
-:root {
-    --red: #ED5454;
-}
+/*:root {*/
+/*    --red: #ED5454;*/
+/*}*/
 
-body {
-    font-family: Montserrat;
-    font-weight: 100;
-    color: #A8B2B9;
-}
+/*body {*/
+/*    font-family: Montserrat;*/
+/*    font-weight: 100;*/
+/*    color: #A8B2B9;*/
+/*}*/
 
-sidebar {
-    background-color: white;
-    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
-}
+/*sidebar {*/
+/*    background-color: white;*/
+/*    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);*/
+/*}*/
 
-main {
-    background-color: #FCFBFC;
-}
+/*main {*/
+/*    background-color: #FCFBFC;*/
+/*}*/
 
 .avatar__name {
     font-size: 0.8rem;
@@ -215,10 +215,10 @@ main {
     }
 }
 
-.copyright {
-    font-size: 0.7rem;
-    font-weight: 400;
-}
+/*.copyright {*/
+/*    font-size: 0.7rem;*/
+/*    font-weight: 400;*/
+/*}*/
 
 .calendar {
     background-color: white;
