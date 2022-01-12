@@ -19,7 +19,7 @@ $query = query("SELECT *,
     INNER JOIN enrolls ON sections.section_id = enrolls.section_id
     INNER JOIN instructor s on sections.instructor_id = s.instructor_id
     INNER JOIN user u on s.instructor_id = u.user_id
-    INNER JOIN user v on v.user_id = {$user_id}
+    INNER JOIN user v on v.user_id = '{$user_id}'
     WHERE enrolls.section_id = " . escape_string($section_id));
 confirm($query);
 

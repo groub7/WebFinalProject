@@ -11,7 +11,7 @@ if(!isset($_SESSION['admin_status'])){
         <div id="page-wrapper">
             <div class="container-fluid">
                 <?php
-                if($_SERVER['REQUEST_URI'] == "/WebFinalProject/public/admin/" || $_SERVER['REQUEST_URI'] == "/WebFinalProject/public/admin/index.php"){
+                if($_SERVER['REQUEST_URI'] == "/storage/ssd1/857/18269857/public_html/admin/" || $_SERVER['REQUEST_URI'] == "/storage/ssd1/857/18269857/public_html/admin/index.php"){
                     include(TEMPLATE_BACK . "/admin_content.php");
                 }
                 if(isset($_GET['coffees'])){

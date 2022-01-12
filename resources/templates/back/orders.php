@@ -74,7 +74,6 @@
         }
 
         $string = $string . " ORDER BY date DESC";
-
         $query = query($string);
             confirm($query);
             while($row = fetch_array($query)){

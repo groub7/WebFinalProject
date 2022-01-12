@@ -47,7 +47,6 @@ if((int)$_SESSION['status'] != 1){
                 $enrollID = $row['enroll_id'];
                 $studentID = $row['student_id'];
                 $section_id = $row['section_id'];
-                $status = $row['status'];
 
                 $sql9 = "SELECT * FROM sections WHERE section_id=$section_id";
 

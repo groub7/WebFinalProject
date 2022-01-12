@@ -9,16 +9,16 @@ if((int)$_SESSION['status'] != 1){
 }
 ?>
     <!-- Page Content -->
-    <form class="" action="" method="post" enctype="multipart/form-data"></form>
+    <form class="" action="" method="post" enctype="multipart/form-data">
     <div class="container justify-content-center p-4">
         <div class="col-md-3 center">
             <p class="text-center larger">Add Section</p>
         </div>
         <hr>
 
-        <?php submit_section(); ?>
         <div class="row">
 
+            <?php submit_section(); ?>
             <div class="form-group text-center"><label for="coursecode">
                     Course Code<input type="text" name="coursecode" class="form-control text-center"></label>
             </div>
@@ -44,7 +44,7 @@ if((int)$_SESSION['status'] != 1){
             </div>
         </div>
 
-    </div>
     </form>
+    </div>
     <!-- /.container -->
 <?php include(TEMPLATE_FRONT . DS . "new_footer.php") ?>
