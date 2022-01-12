@@ -1,5 +1,5 @@
 <div class="container">
-    <a class="navbar-brand" href="">
+    <a class="navbar-brand" href="index.php">
         <img src="img/logo.png" style="width: 150px;" alt="cu"></a>
     <br>
 
