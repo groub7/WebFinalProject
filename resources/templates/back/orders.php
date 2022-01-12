@@ -56,7 +56,7 @@
         INNER JOIN instructor i on sections.instructor_id = i.instructor_id
         INNER JOIN student s on e.student_id = s.student_id
         INNER JOIN user u on i.instructor_id = u.user_id
-        WHERE is_avaliable = 1 ";
+        WHERE is_avaliable = 0 ";
 
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             if ($_POST['instructor'] != 31) {
