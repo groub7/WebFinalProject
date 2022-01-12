@@ -1,8 +1,7 @@
 <?php require_once("../resources/config.php"); ?>
 <?php include(TEMPLATE_FRONT . DS . "new_student_header.php") ?>
 <?php
-//$connection = mysqli_connect("localhost", "root", "", "mydemy");
-$connection = mysqli_connect("eu-cdbr-west-02.cleardb.net", "b3c2723fa090bf", "edb38139", "heroku_ffd5020397b6e96");
+$connection = mysqli_connect("localhost", "root", "", "mydemy");
 
 $current_day = 27;
 $is_current_month = false;
