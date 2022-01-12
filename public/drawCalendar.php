@@ -1,3 +1,5 @@
+<?php require_once("../resources/config.php"); ?>
+<?php include(TEMPLATE_FRONT . DS . "studentHeader.php") ?>
 <?php
 $connection = mysqli_connect("localhost", "root", "", "mydemy");
 
@@ -45,3 +47,4 @@ for ($i = 0; $i < 6; $i++) {
 
 
 echo '</div>';
+include(TEMPLATE_FRONT . DS . "footer.php");

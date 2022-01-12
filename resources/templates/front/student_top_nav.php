@@ -13,12 +13,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="studentIndex.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li><a href="studentIndex.php"><span class="glyphicon glyphicon-plus-sign"></span> Courses</a></li>
             <li><a href="cancelEnroll.php"><span class="glyphicon glyphicon-plus-sign"></span> Enrollment</a></li>
-            <li><a href="addroom.php"><span class="glyphicon glyphicon-asterisk"></span> Room</a></li>
-            <li><a href="addtime.php"><span class="glyphicon glyphicon-time"></span> Time</a></li>
-            <li><a href="list.php"><span class="glyphicon glyphicon-list"></span> List</a></li>
-            <li><a href="tablelist.php"><span class="glyphicon glyphicon-calendar"></span> Schedule</a></li>
+            <li><a href="drawCalendar.php"><span class="glyphicon glyphicon-calendar"></span> Schedule</a></li>
 
             <li class="dropdown -align-right">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo isset($_SESSION['f_name']) ? $_SESSION['f_name'] : ""?> <b class="caret"></b></a>
